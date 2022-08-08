@@ -1,9 +1,9 @@
 even_int = 6 #start with first even integer greater than 2 and 4 
 prime_numbers = [] #list of all odd prime numbers that are less than current even_int value
+success = []
 
+#program will continue to run until Goldbach's Conjecture is proven false
 while True:
-    success = []
-
     largest_odd = even_int - 3
     #check to see if largest odd number is a prime number
     for i in range(2, largest_odd):
@@ -22,9 +22,6 @@ while True:
     if len(success) != 0:
         even_int += 2
         success.clear
-        continue
     else:
-        print("proven false at even integer: " + str(even_int))
+        print("proven false at integer: " + str(even_int))
         break
-
-
