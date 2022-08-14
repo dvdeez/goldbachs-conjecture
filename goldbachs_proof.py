@@ -19,17 +19,25 @@ def proof():
                 success.append(even_int)
                 break
 
-#program will continue to run until Goldbach's Conjecture is proven false
-while True:
-    largest_odd = even_int - 3
-    
-    
-
-    
-    #see whether there was a succesfull proof        
+ #checks whether proof was successful or not      
+def check_proof():
     if len(success) != 0:
         even_int += 2
         success.clear
     else:
         print("proven false at integer: " + str(even_int))
         break
+
+def main(even_int):
+    #program will continue to run until Goldbach's Conjecture is proven false
+    while True:
+        largest_odd = even_int - 3
+
+        is_prime(largest_odd)
+        proof()
+    
+    
+
+    
+   
+    
