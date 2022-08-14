@@ -2,15 +2,19 @@ even_int = 6 #start with first even integer greater than 2 and 4
 prime_numbers = [] #list of all odd prime numbers that are less than current even_int value
 success = []
 
-#program will continue to run until Goldbach's Conjecture is proven false
-while True:
-    largest_odd = even_int - 3
-    #check to see if largest odd number is a prime number
+#check to see if largest odd number is a prime number
+def is_prime(largest_odd):
     for i in range(2, largest_odd):
         if (largest_odd % i) == 0:
             break
     else:
         prime_numbers.append(largest_odd)
+
+#program will continue to run until Goldbach's Conjecture is proven false
+while True:
+    largest_odd = even_int - 3
+    
+    
 
     for x in range(0, len(prime_numbers)):
         for y in range(x, len(prime_numbers)):
